@@ -1,6 +1,6 @@
 {
   "name": "@vgen-co/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "VGen's ESLint config",
   "main": "index.js",
   "author": "",
@@ -8,7 +8,7 @@
   "peerDependencies": {
     "eslint": ">= 8"
   },
-  "devDependencies": {
+  "dependencies": {
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1"
   }
