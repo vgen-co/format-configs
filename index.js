@@ -6,8 +6,6 @@ module.exports = {
         'comma-spacing': 'error',
         eqeqeq: 'error',
         'func-call-spacing': 'error',
-        indent: ['error', 4, { SwitchCase: 1 }],
-        'max-len': ['error', { code: 120, tabWidth: 4 }],
         'new-parens': 'error',
         'no-array-constructor': 'error',
         'no-fallthrough': 'error',
