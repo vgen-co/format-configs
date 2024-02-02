@@ -13,6 +13,7 @@ module.exports = {
         'no-mixed-spaces-and-tabs': 'error',
         'no-multi-assign': 'error',
         'no-nested-ternary': 'error',
+        'no-throw-literal': 'error',
         'no-trailing-spaces': 'error',
         'no-whitespace-before-property': 'error',
         'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
