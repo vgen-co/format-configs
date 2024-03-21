@@ -3,8 +3,10 @@
   "version": "1.0.3",
   "description": "VGen's ESLint config",
   "main": "index.js",
+  "scripts": {
+    "artifactregistry-login": "npx google-artifactregistry-auth"
+  },
   "author": "",
-  "private": false,
   "peerDependencies": {
     "eslint": ">= 8"
   },
