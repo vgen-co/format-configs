@@ -9,7 +9,6 @@ module.exports = {
         'new-parens': 'error',
         'no-array-constructor': 'error',
         'no-fallthrough': 'error',
-        'no-magic-numbers': 'warn',
         'no-mixed-spaces-and-tabs': 'error',
         'no-multi-assign': 'error',
         'no-nested-ternary': 'error',
