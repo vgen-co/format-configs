@@ -1,5 +1,9 @@
 module.exports = {
-    extends: ['eslint:recommended', 'prettier'],
+    extends: [
+        'eslint:recommended',
+        'prettier',
+        'plugin:import/recommended'
+    ],
     plugins: ['prettier'],
     rules: {
         camelcase: 'error',
