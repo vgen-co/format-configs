@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "nodenext",
+        "target": "esnext",
+        "moduleResolution": "nodenext",
+
+        "allowJs": true,
+        "esModuleInterop": true,
+
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "erasableSyntaxOnly": true,
+
+        "declaration": true,
+        "outDir": "dist"
+    },
+    "include": ["./index.ts"]
+}
