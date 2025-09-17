@@ -1,18 +1,16 @@
 {
-    "name": "@vgen-co/eslint-config",
-    "version": "2.1.0",
+    "name": "@vgen-co/format-configs",
+    "version": "1.0.0",
     "description": "VGen's shared linting and formatting configs",
     "author": "VGen (https://vgen.co/)",
     "type": "module",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
     "files": [
         "./dist"
     ],
     "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "require": "./dist/index.js"
+        "./eslint": {
+            "import": "./dist/eslint.js",
+            "require": "./dist/eslint.js"
         },
         "./prettier": {
             "import": "./dist/prettier.js",
