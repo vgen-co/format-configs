@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "VGen's shared linting and formatting configs",
     "author": "VGen (https://vgen.co/)",
+    "license": "UNLICENSED",
     "type": "module",
     "files": [
         "./dist"
