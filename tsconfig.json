@@ -1,16 +1,10 @@
 {
+    "extends": "@tsconfig/node20",
     "compilerOptions": {
-        "module": "nodenext",
-        "target": "esnext",
-        "moduleResolution": "nodenext",
-        "esModuleInterop": true,
-
-        "strict": true,
-        "noUncheckedIndexedAccess": true,
-        "erasableSyntaxOnly": true,
-
+        "outDir": "dist",
         "declaration": true,
-        "outDir": "dist"
+
+        "erasableSyntaxOnly": true,
     },
     "include": ["./src"]
 }
