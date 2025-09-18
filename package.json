@@ -6,16 +6,18 @@
     "license": "UNLICENSED",
     "type": "module",
     "files": [
-        "./dist"
+        "./dist/**/*"
     ],
     "exports": {
         "./eslint": {
             "import": "./dist/eslint.js",
-            "require": "./dist/eslint.js"
+            "require": "./dist/eslint.js",
+            "types": "./dist/eslint.d.ts"
         },
         "./prettier": {
             "import": "./dist/prettier.js",
-            "require": "./dist/prettier.js"
+            "require": "./dist/prettier.js",
+            "types": "./dist/prettier.d.ts"
         }
     },
     "scripts": {
