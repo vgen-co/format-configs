@@ -4,8 +4,9 @@ import stylistic from '@stylistic/eslint-plugin';
 
 export default tseslint.config([
     eslint.configs.recommended,
+
     {
-        files: ['**/*.ts'],
+        files: ['**/*.ts', '**/*.tsx'],
         extends: [tseslint.configs.strictTypeChecked],
         rules: {
             '@typescript-eslint/restrict-template-expressions': [
@@ -17,13 +18,17 @@ export default tseslint.config([
             ],
         },
     },
+
     {
         plugins: {
             '@stylistic': stylistic,
         },
         rules: {
             camelcase: 'error',
-            eqeqeq: 'error',
+
+            // We allow `== null` checks to allow both `null` and `undefined`.
+            eqeqeq: ['error', 'always', { null: 'ignore' }],
+
             'no-array-constructor': 'error',
             'no-multi-assign': 'error',
             'no-nested-ternary': 'error',

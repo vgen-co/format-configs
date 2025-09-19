@@ -4,7 +4,7 @@
         "outDir": "dist",
         "declaration": true,
 
-        "erasableSyntaxOnly": true,
+        "erasableSyntaxOnly": true
     },
     "include": ["./src"]
 }
