@@ -1,10 +1,10 @@
 import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+import tseslint from 'typescript-eslint';
+import globals from 'globals';
 
 export default tseslint.config([
     eslint.configs.recommended,
-
     {
         files: ['**/*.ts', '**/*.tsx'],
         extends: [tseslint.configs.strictTypeChecked],
@@ -18,7 +18,6 @@ export default tseslint.config([
             ],
         },
     },
-
     {
         plugins: {
             '@stylistic': stylistic,
@@ -50,5 +49,21 @@ export default tseslint.config([
             ],
             '@stylistic/spaced-comment': ['error', 'always'],
         },
+    },
+    {
+        languageOptions: {
+            parserOptions: {
+                ecmaVersion: 'latest',
+                sourceType: 'module',
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
+            },
+            globals: {
+                ...globals.node,
+            },
+        },
+    },
+    {
+        ignores: ['eslint.config.mjs', 'coverage', 'dist', 'node_modules'],
     },
 ]);
