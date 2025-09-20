@@ -1,0 +1,2 @@
+extends:
+    - hooks/pre-commit.yml

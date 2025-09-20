@@ -1,0 +1,14 @@
+pre-commit:
+    parallel: true
+    commands:
+        lint:
+            run: 'npm run lint'
+            files: git diff --name-only --cached
+            stage_fixed: true
+        format:
+            run: 'npm run format'
+            files: git diff --name-only --cached
+            stage_fixed: true
+        test:
+            run: 'npm run test --if-present'
+            skip: false
