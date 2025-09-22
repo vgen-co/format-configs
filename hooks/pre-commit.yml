@@ -10,5 +10,5 @@ pre-commit:
             files: git diff --name-only --cached
             stage_fixed: true
         test:
-            run: 'npm run test --if-present'
+            run: 'npm run test'
             skip: false
