@@ -1,6 +1,6 @@
 {
     "name": "@vgen-co/format-configs",
-    "version": "1.3.2",
+    "version": "1.3.3",
     "description": "VGen's shared linting and formatting configs",
     "author": "VGen (https://vgen.co/)",
     "license": "UNLICENSED",
@@ -41,8 +41,8 @@
         "typescript-eslint": "^8.30.1"
     },
     "devDependencies": {
-        "@tsconfig/node20": "^20.1.6",
-        "@types/node": "^20.19.17",
+        "@tsconfig/node24": "^24.0.1",
+        "@types/node": "^24.5.2",
         "lefthook": "1.13.1",
         "typescript": "^5.8.3"
     }
