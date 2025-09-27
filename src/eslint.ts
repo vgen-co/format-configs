@@ -64,6 +64,6 @@ export default tseslint.config([
         },
     },
     {
-        ignores: ['eslint.config.mjs', 'coverage', 'dist', 'node_modules'],
+        ignores: ['eslint.config.mjs', 'coverage', 'dist', 'node_modules', '.cache'],
     },
 ]);
