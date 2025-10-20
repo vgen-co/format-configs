@@ -1,6 +1,6 @@
 {
     "name": "@vgen-co/format-configs",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "description": "VGen's shared linting and formatting configs",
     "author": "VGen (https://vgen.co/)",
     "license": "UNLICENSED",
@@ -24,9 +24,9 @@
     "scripts": {
         "artifactregistry-login": "npx google-artifactregistry-auth",
         "check-updates": "npx npm-check-updates",
-        "format:check": "prettier . --check --cache",
+        "format:check": "prettier --check --cache .",
         "format": "npm run build && prettier . --write --cache",
-        "lint:check": "eslint . --max-warnings=0 --cache",
+        "lint:check": "eslint --flag unstable_native_nodejs_ts_config --max-warnings=0 --cache .",
         "lint": "npm run build && npm run lint:check -- --fix",
         "test": "echo 0",
         "build": "tsc"
