@@ -7,7 +7,7 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config([
     eslint.configs.recommended,
     {
-        files: ['**/*.ts', '**/*.tsx'],
+        files: ['**/*.{ts,tsx}'],
         extends: [tseslint.configs.strictTypeChecked],
         rules: {
             '@typescript-eslint/restrict-template-expressions': [
@@ -17,6 +17,8 @@ export default tseslint.config([
                     allowNumber: true,
                 },
             ],
+
+            '@typescript-eslint/consistent-type-imports': 'error',
         },
     },
     {
@@ -74,6 +76,6 @@ export default tseslint.config([
         },
     },
     {
-        ignores: ['eslint.config.mjs', 'coverage', 'dist', 'node_modules', '.cache'],
+        ignores: ['eslint.config.mjs', 'eslint.config.mts', 'coverage', 'dist', 'node_modules', '.cache'],
     },
 ]);
