@@ -1,11 +1,13 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import zodX from 'eslint-plugin-zod-x';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config([
     eslint.configs.recommended,
+    zodX.configs.recommended,
     {
         files: ['**/*.{ts,tsx}'],
         extends: [tseslint.configs.strictTypeChecked],
