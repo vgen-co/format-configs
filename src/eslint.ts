@@ -1,16 +1,20 @@
-import eslint from '@eslint/js';
+import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import { importX } from 'eslint-plugin-import-x';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import zodX from 'eslint-plugin-zod-x';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import tseslint, { configs } from 'typescript-eslint';
 
 export default tseslint.config([
-    eslint.configs.recommended,
+    js.configs.recommended,
     zodX.configs.recommended,
+    importX.flatConfigs.recommended,
+    importX.flatConfigs.typescript,
     {
         files: ['**/*.{ts,tsx}'],
-        extends: [tseslint.configs.strictTypeChecked],
+        extends: [configs.strictTypeChecked],
         rules: {
             '@typescript-eslint/restrict-template-expressions': [
                 'error',
@@ -66,6 +70,7 @@ export default tseslint.config([
     },
     {
         languageOptions: {
+            parser: tsParser,
             parserOptions: {
                 ecmaVersion: 'latest',
                 sourceType: 'module',
@@ -78,6 +83,14 @@ export default tseslint.config([
         },
     },
     {
-        ignores: ['eslint.config.mjs', 'eslint.config.mts', 'coverage', 'dist', 'node_modules', '.cache'],
+        ignores: [
+            'eslint.config.mjs',
+            'eslint.config.mts',
+            '.prettierrc.js',
+            'coverage',
+            'dist',
+            'node_modules',
+            '.cache',
+        ],
     },
 ]);
