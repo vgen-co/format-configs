@@ -3,6 +3,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import { importX } from 'eslint-plugin-import-x';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import unicorn from 'eslint-plugin-unicorn';
 import zodX from 'eslint-plugin-zod-x';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -30,6 +31,7 @@ export default tseslint.config([
     {
         plugins: {
             '@stylistic': stylistic,
+            unicorn,
         },
         rules: {
             camelcase: 'error',
@@ -44,6 +46,10 @@ export default tseslint.config([
             'require-await': 'error',
 
             'import-x/no-named-as-default-member': 'off',
+            'import-x/newline-after-import': 'error',
+
+            // TODO: use more from https://github.com/sindresorhus/eslint-plugin-unicorn as desired
+            'unicorn/prefer-node-protocol': 'error',
 
             '@stylistic/comma-spacing': 'error',
             '@stylistic/function-call-spacing': 'error',
