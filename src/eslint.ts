@@ -5,7 +5,7 @@ import { importX } from 'eslint-plugin-import-x';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import zodX from 'eslint-plugin-zod-x';
 import globals from 'globals';
-import tseslint, { configs } from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config([
     js.configs.recommended,
@@ -14,7 +14,7 @@ export default tseslint.config([
     importX.flatConfigs.typescript,
     {
         files: ['**/*.{ts,tsx}'],
-        extends: [configs.strictTypeChecked],
+        extends: [tseslint.configs.strictTypeChecked],
         rules: {
             '@typescript-eslint/restrict-template-expressions': [
                 'error',
@@ -42,6 +42,8 @@ export default tseslint.config([
             'no-nested-ternary': 'error',
             'prefer-const': 'error',
             'require-await': 'error',
+
+            'import-x/no-named-as-default-member': 'off',
 
             '@stylistic/comma-spacing': 'error',
             '@stylistic/function-call-spacing': 'error',

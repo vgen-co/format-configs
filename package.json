@@ -1,6 +1,6 @@
 {
     "name": "@vgen-co/format-configs",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "description": "VGen's shared linting and formatting configs",
     "author": "VGen (https://vgen.co/)",
     "license": "UNLICENSED",
