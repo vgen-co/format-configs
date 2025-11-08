@@ -29,8 +29,10 @@ export default tseslint.config([
         },
     },
     {
+        files: ['**/*.{js,jsx,ts,tsx}'],
         plugins: {
             '@stylistic': stylistic,
+            'simple-import-sort': simpleImportSort,
             unicorn,
         },
         rules: {
@@ -44,6 +46,9 @@ export default tseslint.config([
             'no-nested-ternary': 'error',
             'prefer-const': 'error',
             'require-await': 'error',
+
+            'simple-import-sort/imports': 'error',
+            'simple-import-sort/exports': 'error',
 
             'import-x/no-named-as-default-member': 'off',
             'import-x/newline-after-import': 'error',
@@ -65,15 +70,6 @@ export default tseslint.config([
                 { anonymous: 'always', named: 'never', asyncArrow: 'always' },
             ],
             '@stylistic/spaced-comment': ['error', 'always'],
-        },
-    },
-    {
-        plugins: {
-            'simple-import-sort': simpleImportSort,
-        },
-        rules: {
-            'simple-import-sort/imports': 'error',
-            'simple-import-sort/exports': 'error',
         },
     },
     {
