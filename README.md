@@ -56,13 +56,10 @@ We use [Lefthook](https://lefthook.dev/) to help execute the above scripts autom
 
 To reuse the common pre-commit hook:
 
-```sh
-npm install --save-dev lefthook
-```
-
-Then create a `lefthook.yml` file in the root of the target repository with:
-
-```yaml
-extends:
-    - node_modules/@vgen-co/format-configs/hooks/pre-commit.yml
-```
+1. [Install Lefthook](https://lefthook.dev/installation/index.html) globally (once).
+1. Create a `lefthook.yml` file in the root of the target repository with:
+    ```yaml
+    extends:
+        - node_modules/@vgen-co/format-configs/hooks/pre-commit.yml
+    ```
+1. Run `lefthook install`.
