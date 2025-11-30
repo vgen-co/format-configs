@@ -51,6 +51,9 @@ export default tseslint.config([
             'simple-import-sort/exports': 'error',
 
             'import-x/no-named-as-default-member': 'off',
+            'import-x/no-cycle': 'error',
+            'import-x/no-self-import': 'error',
+            'import-x/no-useless-path-segments': 'error',
             'import-x/newline-after-import': 'error',
 
             // TODO: use more from https://github.com/sindresorhus/eslint-plugin-unicorn as desired
