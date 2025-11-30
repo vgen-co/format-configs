@@ -51,10 +51,13 @@ export default tseslint.config([
             'simple-import-sort/exports': 'error',
 
             'import-x/no-named-as-default-member': 'off',
-            'import-x/no-cycle': 'error',
             'import-x/no-self-import': 'error',
             'import-x/no-useless-path-segments': 'error',
             'import-x/newline-after-import': 'error',
+
+            // While this would be nice to include, it's computationally heavy/slow
+            // Could use `npx dpdm [...]` instead.
+            // 'import-x/no-cycle': 'error',
 
             // TODO: use more from https://github.com/sindresorhus/eslint-plugin-unicorn as desired
             'unicorn/prefer-node-protocol': 'error',
