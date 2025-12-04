@@ -3,15 +3,18 @@ options:
 
 steps:
     - id: 'artifactregistry-login'
-      name: 'gcr.io/cloud-builders/npm'
+      name: 'node:24.10'
+      entrypoint: 'npm'
       args: ['run', 'artifactregistry-login']
 
     - id: 'install-dependencies'
-      name: 'gcr.io/cloud-builders/npm'
+      name: 'node:24.10'
+      entrypoint: 'npm'
       args: ['ci', '--ignore-scripts']
 
     - id: 'build'
-      name: 'gcr.io/cloud-builders/npm'
+      name: 'node:24.10'
+      entrypoint: 'npm'
       args: ['run', 'build']
 
 artifacts:
