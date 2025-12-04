@@ -1,9 +1,20 @@
+options:
+    requestedVerifyOption: 'VERIFIED'
+
 steps:
-    - name: gcr.io/cloud-builders/npm
+    - id: 'artifactregistry-login'
+      name: 'gcr.io/cloud-builders/npm'
       args: ['run', 'artifactregistry-login']
-    - name: gcr.io/cloud-builders/npm
-      args: ['ci']
-    - name: gcr.io/cloud-builders/npm
+
+    - id: 'install-dependencies'
+      name: 'gcr.io/cloud-builders/npm'
+      args: ['ci', '--ignore-scripts']
+
+    - id: 'build'
+      name: 'gcr.io/cloud-builders/npm'
       args: ['run', 'build']
-    - name: gcr.io/cloud-builders/npm
-      args: ['publish']
+
+artifacts:
+    npmPackages:
+        - repository: 'https://us-npm.pkg.dev/${PROJECT_ID}/vgen-npm-packages'
+          packagePath: './'
